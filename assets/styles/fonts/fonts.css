@@ -1,0 +1,396 @@
+:root {
+	/*
+	 * Font Stacks
+	 */
+	--system-stack: -apple-system, BlinkMacSystemFont, Lato, Roboto, system-ui, 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
+
+	--mono-stack: 'IBM Plex Mono', 'Roboto Mono', 'Inconsolata', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', Courier, 'Courier New', monospace;
+
+	--font-stack: 'Inter', var(--system-stack);
+	/*
+	 * Other Font Properties
+	 */
+	--font-size: 16px;
+	/*
+	 * Fix some CSS font properties
+	 */
+	font-kerning: normal;					/* Force kerning computing on fonts that manage it. */
+	font-optical-sizing: auto;				/* Enable control of vertical axis. */
+	-webkit-font-size-adjust: 100%;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+	hyphens: auto;
+	line-height: 1.15;
+	text-rendering: optimizeLegibility;		/* Force displaying most legible font. */
+}
+
+/*
+ * Variable Inter Font Correction
+ */
+@supports ( font-variation-settings: normal ) {
+	:root {
+		--font-stack: 'Inter var', 'Inter', var(--system-stack);
+	}
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100;
+	src: url("https://rsms.me/inter/font-files/Inter-Thin.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Thin.woff") format("woff"),
+		url("Inter/Inter-Thin.woff2") format("woff2"),
+		url("Inter/Inter-Thin.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 100;
+	src: url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-ThinItalic.woff") format("woff"),
+		url("Inter/Inter-ThinItalic.woff2") format("woff2"),
+		url("Inter/Inter-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 200;
+	src: url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-ExtraLight.woff") format("woff"),
+		url("Inter/Inter-ExtraLight.woff2") format("woff2"),
+		url("Inter/Inter-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 200;
+	src: url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-ExtraLightItalic.woff") format("woff"),
+		url("Inter/Inter-ExtraLightItalic.woff2") format("woff2"),
+		url("Inter/Inter-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300;
+	src: url("https://rsms.me/inter/font-files/Inter-Light.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Light.woff") format("woff"),
+		url("Inter/Inter-Light.woff2") format("woff2"),
+		url("Inter/Inter-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 300;
+	src: url("https://rsms.me/inter/font-files/Inter-LightItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-LightItalic.woff") format("woff"),
+		url("Inter/Inter-LightItalic.woff2") format("woff2"),
+		url("Inter/Inter-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Regular.woff") format("woff"),
+		url("Inter/Inter-Regular.woff2") format("woff2"),
+		url("Inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src: url("https://rsms.me/inter/font-files/Inter-Italic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Italic.woff") format("woff"),
+		url("Inter/Inter-Italic.woff2") format("woff2"),
+		url("Inter/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+	src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Medium.woff") format("woff"),
+		url("Inter/Inter-Medium.woff2") format("woff2"),
+		url("Inter/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 500;
+	src: url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-MediumItalic.woff") format("woff"),
+		url("Inter/Inter-MediumItalic.woff2") format("woff2"),
+		url("Inter/Inter-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 600;
+	src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-SemiBold.woff") format("woff"),
+		url("Inter/Inter-SemiBold.woff2") format("woff2"),
+		url("Inter/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 600;
+	src: url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-SemiBoldItalic.woff") format("woff"),
+		url("Inter/Inter-SemiBoldItalic.woff2") format("woff2"),
+		url("Inter/Inter-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url("https://rsms.me/inter/font-files/Inter-Bold.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Bold.woff") format("woff"),
+		url("Inter/Inter-Bold.woff2") format("woff2"),
+		url("Inter/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 700;
+	src: url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-BoldItalic.woff") format("woff"),
+		url("Inter/Inter-BoldItalic.woff2") format("woff2"),
+		url("Inter/Inter-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 800;
+	src: url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-ExtraBold.woff") format("woff"),
+		url("Inter/Inter-ExtraBold.woff2") format("woff2"),
+		url("Inter/Inter-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 800;
+	src: url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-ExtraBoldItalic.woff") format("woff"),
+		url("Inter/Inter-ExtraBoldItalic.woff2") format("woff2"),
+		url("Inter/Inter-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 900;
+	src: url("https://rsms.me/inter/font-files/Inter-Black.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-Black.woff") format("woff"),
+		url("Inter/Inter-Black.woff2") format("woff2"),
+		url("Inter/Inter-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 900;
+	src: url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff2") format("woff2"),
+		url("https://rsms.me/inter/font-files/Inter-BlackItalic.woff") format("woff"),
+		url("Inter/Inter-BlackItalic.woff2") format("woff2"),
+		url("Inter/Inter-BlackItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Inter Var';
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+	font-named-instance: 'Regular';
+	src: url("https://rsms.me/inter/font-files/Inter-upright.var.woff2") format("woff2"),
+		url("Inter/Inter-upright.var.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'Inter Var';
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+	font-named-instance: 'Italic';
+	src: url("https://rsms.me/inter/font-files/Inter-italic.var.woff2") format("woff2"),
+		url("Inter/Inter-italic.var.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100;
+	src: url("IBMPlexMono/IBMPlexMono-Thin.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Thin.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 100;
+	src: url("IBMPlexMono/IBMPlexMono-ThinItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 200;
+	src: url("IBMPlexMono/IBMPlexMono-ExtraLight.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 200;
+	src: url("IBMPlexMono/IBMPlexMono-ExtraLightItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300;
+	src: url("IBMPlexMono/IBMPlexMono-Light.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 300;
+	src: url("IBMPlexMono/IBMPlexMono-LightItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url("IBMPlexMono/IBMPlexMono-Regular.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src: url("IBMPlexMono/IBMPlexMono-Italic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 600;
+	src: url("IBMPlexMono/IBMPlexMono-Text.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Text.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 600;
+	src: url("IBMPlexMono/IBMPlexMono-TextItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-TextItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 600;
+	src: url("IBMPlexMono/IBMPlexMono-Medium.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 600;
+	src: url("IBMPlexMono/IBMPlexMono-MediumItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url("IBMPlexMono/IBMPlexMono-SemiBold.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-SemiBold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 700;
+	src: url("IBMPlexMono/IBMPlexMono-SemiBoldItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 800;
+	src: url("IBMPlexMono/IBMPlexMono-Bold.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 800;
+	src: url("IBMPlexMono/IBMPlexMono-BoldItalic.woff2") format("woff2"),
+		url("IBMPlexMono/IBMPlexMono-BoldItalic.woff") format("woff");
+}

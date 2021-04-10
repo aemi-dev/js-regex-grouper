@@ -1,0 +1,30 @@
+:root {
+    /*
+     * Border Colors
+     */
+    --bold-border: rgb(150, 150, 150);
+    --semibold-border: rgb(170, 170, 170);
+    --medium-border: rgb(190, 190, 190);
+    --regular-border: rgb(210, 210, 210);
+    --semilight-border: rgb(230, 230, 230);
+    --light-border: rgb(240, 240, 240);
+    --extralight-border: rgb(250, 250, 250);
+    /*
+     * Alpha Border Colors
+     */
+    --overlay-border: rgba(0, 0, 0, .1);
+    /*
+     * Radius
+     */
+    --click-radius: .25rem;
+    /*
+     * Text Color
+     */
+    --text: rgb(28, 28, 28);
+    --text-hover: rgb(56, 56, 56);
+    --text-active: rgb(42, 42, 42);
+    --text-focus: rgb(0, 0, 0);
+    --text-dimmed: rgb(128, 128, 128);
+    --text-shaded: rgb(200, 200, 200);
+    --shaded-background: rgb(250, 250, 250);
+}
